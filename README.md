@@ -1,10 +1,12 @@
 # MINIKUBE SLATRA
 
-Slatra means "to butcher" which might not be the exact analogy as we are NOT breaking Minikube. What we want to do is to experiment, learn and do some cool stuff in Minikube.
+Slatra means "to butcher" which might not be the exact analogy as we are NOT breaking Minikube. What we want to do is to experiment, learn and do some cool stuff in Minikube and Kubectl.
 
 I would like to learn the K8 concepts, experiment around with the Control Plane as well as Working Nodes and do some Go Scripting to automate workflows (We will get to that maybe as my understanding grows.).
 
 ## What is Minikube and Kubectl?
+Minikube is a Single Node Cluster.
+
 Try to go over [this link](https://kubernetes.io/docs/tasks/tools/) and get both set up. I am using Docker to run Minikube, you can use Hypervisors of your choice.
 
 ## How I will know What to do next?

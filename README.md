@@ -15,4 +15,19 @@ Okay, So I will be reading `kubernetes.io` website in depth. For each concept I 
 ## Concepts
 
 ### Kubernetes Objects
-These are persistent entities(can stay across runs). They tell about state of the application(details of containers, resource available to them, Policies like restart, upgrades etc.). This is the desired state that the control plane works to achieve. Examples include :- Pods, Deployment, Service. You can declare this using YAML files.
+These are persistent entities(can stay across runs). They tell about state of the application(details of containers, resource available to them, Policies like restart, upgrades etc.). This is the desired state that the control plane works to achieve. Examples include :- Pods, Deployment, Service. You can declare this using YAML files. 
+
+```
+apiVersion : app/v1
+kind : Deployment/Pod/ReplicaSet/Service
+metadata : 
+    name : object-name
+spec :  # Desired State you want
+    containers:
+    -   name : nginx
+        image : nginx:latest
+        ports:
+        -   containerPort:80
+```
+
+Format of `spec` for K8 object. 

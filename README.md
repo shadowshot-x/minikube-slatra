@@ -11,3 +11,8 @@ Try to go over [this link](https://kubernetes.io/docs/tasks/tools/) and get both
 
 ## How I will know What to do next?
 Okay, So I will be reading `kubernetes.io` website in depth. For each concept I study, I will try to articulate scenarios in minikube. It will be interesting. I will be logging commands Experiment wise and log my thoughts about what I learned in form of blogs/Readme.
+
+## Concepts
+
+### Kubernetes Objects
+These are persistent entities(can stay across runs). They tell about state of the application(details of containers, resource available to them, Policies like restart, upgrades etc.). This is the desired state that the control plane works to achieve. Examples include :- Pods, Deployment, Service. You can declare this using YAML files.

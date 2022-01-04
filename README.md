@@ -4,18 +4,23 @@ Slatra means "to butcher" which might not be the exact analogy as we are NOT bre
 
 I would like to learn the K8 concepts, experiment around with the Control Plane as well as Working Nodes and do some Go Scripting to automate workflows (We will get to that maybe as my understanding grows.).
 
+1. Concepts about Kubernetes are in THIS README.
+2. Concepts about commands of minikube and Kubectl and discoveries from them are in EXPERIMENT FOLDER READMEs.
+
 ## What is Minikube and Kubectl?
 Minikube is a Single Node Cluster.
 
 Try to go over [this link](https://kubernetes.io/docs/tasks/tools/) and get both set up. I am using Docker to run Minikube, you can use Hypervisors of your choice.
 
 ## How I will know What to do next?
-Okay, So I will be reading `kubernetes.io` website in depth. For each concept I study, I will try to articulate scenarios in minikube. It will be interesting. I will be logging commands Experiment wise and log my thoughts about what I learned in form of blogs/Readme.
+Okay, So I will be reading `kubernetes.io` website in depth. For each concept I study, I will try to articulate scenarios in minikube. It will be interesting. I will be logging commands Experiment wise and log my thoughts about what I learned in form of blogs/Readme. The Concepts I learn will be listed Below.
 
 ## Concepts
 
 ### Kubernetes Objects
 These are persistent entities(can stay across runs). They tell about state of the application(details of containers, resource available to them, Policies like restart, upgrades etc.). This is the desired state that the control plane works to achieve. Examples include :- Pods, Deployment, Service. You can declare this using YAML files. 
+
+Resource URL :- `/api/v1/pods/some-name`
 
 ```
 apiVersion : app/v1
@@ -31,3 +36,14 @@ spec :  # Desired State you want
 ```
 
 Format of `spec` for K8 object. 
+
+Naming :- A K8 object can have a unique name across that Object but not across Objects. This means a Pod and Deployment can have a Deployment. This is client generated.
+
+UID :- System generated String. Unique in the whole cluster. 
+
+#### Namespaces
+Isolate a group of resources in a cluster. Use case for a Namespace is for many users across multiple teams. They are used to divide resources between Users. Example in my team in Intuit, my BU had a separate namespace where all our applications lived. Other Business Unit had different namespace. Not required for small clusters(like ourselves. But no harm in learning). Namespaces are unique entities with NO nesting. 
+
+DNS uses Namespace name :- `service-name.namespace-name.svc.cluster.local`
+
+Note :- Not all K8 Objects are in Namespace. Eg:- Nodes

@@ -40,6 +40,14 @@ In control plane, there is only 1 Deployment and that is of CoreDNS. We can see 
 
 `$ kubectl get deployments --all-namespaces -l k8s-app=kube-dns -o wide`
 
+### Kubectl get namespaces
+We have 4 namespaces running in our K8 minikube.
+
+1. Default - Remember kubectl is configured to talk to here
+2. kube-system - Our control-plane
+3. kube-public - This is visible by everyone in the cluster. Resources in this can be used by anyone in the cluster
+4. kube-node-lease - Not clear. Allows heartbeat to be sent by kubelet to control plane.
+
 ## Kubectl create
 Helps to create K8 resources. We are limiting ourselves to Deployment, Pod and Namespaces right now. But, many other things can be created. This includes ingress, configmap, secrets, cronjob, role, service etc. It also has similar commands like -l, -R, -o which provide same functions as above.
 
@@ -50,4 +58,4 @@ Lets create a Deployment named nginx with 2 running instances of nginx image.
 
 We get an automatic selector "app=nginx"
 
-Now, we can stop our minikube cluster. 
+Now, we can stop our minikube cluster.

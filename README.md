@@ -47,3 +47,11 @@ Isolate a group of resources in a cluster. Use case for a Namespace is for many 
 DNS uses Namespace name :- `service-name.namespace-name.svc.cluster.local`
 
 Note :- Not all K8 Objects are in Namespace. Eg:- Nodes
+
+#### Labels and Selectors
+These are attached to K8 objects. Labels are key=value pairs. These are identifying attributes. Can be added at anytime. These are in metadata of the K8 object. A Label Selector helps to group the objects based on labels. For eg:- In `kubectl get pods -l tier!=frontend`.
+
+Often used to identify the pods a Service will target. 
+
+#### Annotations
+TO attach non identifying metadata, we can use annotations. Again this is in metadata. Not used to select object like label.

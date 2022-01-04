@@ -29,6 +29,12 @@ Pods can be seen as abstraction for running containers. Containers(Multiple or S
 
 `$ kubectl get pods -n kube-system -o wide`
 
+`$ kubectl get pods --field-selector metadata.name=myname`
+
+This is an example of field selector. These are resource fields. 
+
+`$ kubectl get pods --all-namespaces --field-selector metadata.namespace!=default`
+
 Here we list all the pods in kube-system namespace with the control plane. These include CoreDNS, etcd, kube-apiserver, kube-controller-manager, kube-proxy(as this is also a Node) and kube-scheduler. We can see the Number of pods for each type, Status, Restarts, Age and IP. 
 
 ### Kubectl get deployments

@@ -17,6 +17,9 @@ Okay, So I will be reading `kubernetes.io` website in depth. For each concept I 
 
 ## Concepts
 
+### K8 architecture
+Nodes are machines(virtual or bare metal) which have kubelet, kube-proxy and a container runtime(containerd, crio etc) installed. Nodes can self register to API server. Their identifier is their name. The state of the node is tied to the name. There is a concept of Heartbeat to make API Server know that Node is alive.
+
 ### Kubernetes Objects
 These are persistent entities(can stay across runs). They tell about state of the application(details of containers, resource available to them, Policies like restart, upgrades etc.). This is the desired state that the control plane works to achieve. Examples include :- Pods, Deployment, Service. You can declare this using YAML files. 
 
@@ -55,3 +58,8 @@ Often used to identify the pods a Service will target.
 
 #### Annotations
 TO attach non identifying metadata, we can use annotations. Again this is in metadata. Not used to select object like label.
+
+#### Service
+Service lets you access your containers from outside the Cluster. This can be another cluster or the internet. They lay out a policy to access the pods. 
+
+A good example to understand Service :- There are many pods of frontend. All of them will query from a backend. So, if you assign each frontend pod a backend pod, this would mean they become coupled. What service does is that it acts as a layer. Frontend pods send request to this layer and this layer then distributes the requests among backend pods. Thereby decoupling frontend and backend.

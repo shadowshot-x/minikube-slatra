@@ -60,6 +60,16 @@ Often used to identify the pods a Service will target.
 TO attach non identifying metadata, we can use annotations. Again this is in metadata. Not used to select object like label.
 
 #### Service
-Service lets you access your containers from outside the Cluster. This can be another cluster or the internet. They lay out a policy to access the pods. 
+Service lets you access your containers from outside the Cluster. This can be another cluster or the internet. They lay out a policy to access the pods. These are TCP by default.
 
 A good example to understand Service :- There are many pods of frontend. All of them will query from a backend. So, if you assign each frontend pod a backend pod, this would mean they become coupled. What service does is that it acts as a layer. Frontend pods send request to this layer and this layer then distributes the requests among backend pods. Thereby decoupling frontend and backend.
+
+There are 4 types of service :-
+1. ClusterIP - Defualt IP provided to service by K8. Only reachable from within the cluster.
+2. NodePort - Exposes port of a Node. These route to ClusterIP Service. `Node-Ip:NodePort` from outside.
+3. Load Balancer - Used to Expose service to outside using Cloud Service's Load Balancer. 
+4. ExternalName - ???
+
+An important part of Service is Port. `targetport` is port of the *Pod* where your API is exposed like 8080 in your Golang server or 3000 in your React Server. This is mapped by the service to a `port` of the *Node* say 80 if you want to set to it. 
+
+Multiple port services are supported in K8.

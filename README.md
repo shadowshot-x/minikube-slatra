@@ -15,6 +15,82 @@ Try to go over [this link](https://kubernetes.io/docs/tasks/tools/) and get both
 ## How I will know What to do next?
 Okay, So I will be reading `kubernetes.io` website in depth. For each concept I study, I will try to articulate scenarios in minikube. It will be interesting. I will be logging commands Experiment wise and log my thoughts about what I learned in form of blogs/Readme. The Concepts I learn will be listed Below.
 
+## Commands Covered
+
+### Kubectl
+1. create  &#x2611;
+2. expose
+3. run
+4. set
+5. explain
+6. get &#x2611;
+7. edit
+8. delete
+9. rollout
+10. scale
+11. autoscale
+12. certificate
+13. cluster-info
+14. top
+15. cordon
+16. uncordon
+17. drain
+18. taint
+19. describe
+20. logs
+21. attach
+22. exec &#x2611;
+23. port-forward
+24. proxy
+25. cp
+26. auth
+27. debug
+28. diff
+29. apply
+30. patch
+31. replace
+32. wait
+33. kustomize
+34. label
+35. annotate
+36. completion
+37. api-resources
+38. api-versions
+39. config
+40. plugin
+41. version
+
+### Minikube
+1. start &#x2611;
+2. status
+3. stop
+4. delete
+5. dashboar
+6. pause
+7. unpause
+8. docker-env
+9. podman-env
+10. cache
+11. image
+12. addons
+13. config &#x2611; - But will include in some more experiments
+14. profile &#x2611;
+15. update-context
+16. service &#x2611;
+17. tunnel &#x2611;
+18. mount
+19. ssh
+20. kubectl &#x2611;
+21. node
+22. cp
+23. ssh-key
+24. ssh-host
+25. ip
+26. logs
+27. update-check
+28. version
+29. completion
+
 ## Concepts
 
 ### K8 architecture
@@ -73,3 +149,5 @@ There are 4 types of service :-
 An important part of Service is Port. `targetport` is port of the *Pod* where your API is exposed like 8080 in your Golang server or 3000 in your React Server. This is mapped by the service to a `port` of the *Node* say 80 if you want to set to it. 
 
 Multiple port services are supported in K8.
+
+## Cluster Achitecture

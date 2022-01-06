@@ -1,6 +1,6 @@
 # Experiment 2
 
-Main aim of this Experiment is to play around with services. Some commands we will discover in this experiment include :- `minikube service`, `kubectl expose`, `minikube tunnel`.
+Main aim of this Experiment is to play around with services. Some commands we will discover in this experiment include :- `minikube service`, `kubectl exec -it`, `minikube tunnel`.
 
 1. Lets simulate a Minikube cluster with 2 Deployment, 3 pods of nginx image(consider them as the frontend image) running using a Deployment and 2 pods of another Deployment of nginx. 
 2. We want our frontend to be accessible to the outside world. So, we will create service if type NodePort and then of type Load Balancer.

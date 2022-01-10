@@ -58,13 +58,13 @@ Okay, So I will be reading `kubernetes.io` website in depth. For each concept I 
 38. api-versions
 39. config
 40. plugin
-41. version
+41. version  &#x2611;
 
 ### Minikube
 1. start &#x2611;
 2. status
 3. stop
-4. delete
+4. delete &#x2611;
 5. dashboar
 6. pause
 7. unpause
